@@ -11,6 +11,7 @@ const backgrounds = [
 //   backgrounds[new Date().getDay()]
 // })`;
 
+let titleValue = '';
 const searchField = document.getElementById('search-input');
 const searchType = document.getElementById('search-type');
 const searchMicBtn = document.getElementById('search-mic-btn');
@@ -18,6 +19,14 @@ const searchMicIcon = document.getElementById('search-mic-icon');
 const micListeningIcon = document.getElementById('mic-listening-icon');
 const searchForm = document.getElementById('search-form');
 const errorBox = document.getElementById('err-msg');
+const titleBar = document.getElementById('titleBar');
+
+titleValue = localStorage.getItem('gspbyrj');
+if (!titleValue) {
+  setTitle();
+} else {
+  titleBar.textContent = titleValue;
+}
 
 let speechRecognitionActive = false;
 
@@ -141,6 +150,18 @@ window.addEventListener('keydown', (e) => {
   } else if (e.ctrlKey && e.shiftKey && e.code === 'KeyI') {
     e.preventDefault();
   }
+});
+function setTitle() {
+  let titleValue = prompt('Enter Your Name');
+  if (!titleValue || titleValue == 'null') {
+    return setTitle();
+  } else {
+    localStorage.setItem('gspbyrj', titleValue);
+    titleBar.textContent = titleValue;
+  }
+}
+titleBar.addEventListener('click', () => {
+  setTitle();
 });
 // window.dispatchEvent(new KeyboardEvent('keydown', { key: 'a' }));
 // window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
