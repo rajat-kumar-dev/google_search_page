@@ -6,8 +6,9 @@
 }
 :root {
   --dark: #232627;
-  --light: #ececec;
+  --light: #eeeeee;
   --gray: #808080;
+  --text-blue: #4285f4;
   --light-gray: rgb(192, 192, 192);
   --dark-gray: rgb(64, 64, 64);
 }
@@ -17,6 +18,7 @@
     --fg: var(--light);
     --shadow: var(--dark-gray);
     --invert: invert(1);
+    --textclr: var(--light);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -25,8 +27,10 @@
     --fg: var(--dark);
     --shadow: var(--light-gray);
     --invert: invert(0);
+    --textclr: var(--text-blue);
   }
 }
+
 body {
   min-height: 100vh;
   display: flex;
@@ -53,7 +57,7 @@ body {
   font-variant: small-caps;
   letter-spacing: 3px;
   font-weight: bolder;
-  color: var(--fg);
+  color: var(--textclr);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   text-shadow: 0 0 2px var(--shadow);
@@ -148,4 +152,22 @@ body {
 }
 #err-msg:empty {
   display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #titleBar {
+    font-size: 50px;
+  }
+  #search-input {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #titleBar {
+    font-size: 35px;
+  }
+  .searchBox {
+    padding: 5px 9px 5.5px;
+    width: 80vw;
+  }
 }

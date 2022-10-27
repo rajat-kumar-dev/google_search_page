@@ -7,9 +7,9 @@ const backgrounds = [
   './pics/w5.jpg',
   './pics/w6.jpg',
 ];
-document.body.style.backgroundImage = `url(${
-  backgrounds[new Date().getDay()]
-})`;
+// document.body.style.backgroundImage = `url(${
+//   backgrounds[new Date().getDay()]
+// })`;
 
 const searchField = document.getElementById('search-input');
 const searchType = document.getElementById('search-type');
