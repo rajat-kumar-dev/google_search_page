@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="titleBar">Rajat Kumar</div>
+      <form
+        id="search-form"
+        action="https://www.google.com/search"
+        autocomplete="on"
+        target="_blank"
+      >
+        <div class="search-wrapper">
+          <div class="searchBox">
+            <img id="searchIcon" src="icon/icon_search.png" alt="" />
+            <input
+              type="search"
+              id="search-input"
+              name="q"
+              placeholder="Search Google"
+              autocomplete="off"
+              autofocus
+            />
+            <!-- tbm=isch -->
+            <div id="err-msg"></div>
+            <button type="button" id="search-mic-btn">
+              <svg
+                id="search-mic-icon"
+                focusable="false"
+                viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#4285f4"
+                  d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+                ></path>
+                <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                <path
+                  fill="#fbbc04"
+                  d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+                ></path>
+                <path
+                  fill="#ea4335"
+                  d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+                ></path>
+              </svg>
+              <div id="mic-listening-icon" class="hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="50px"
+                  height="50px"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="xMidYMid"
+                >
+                  <circle cx="27.5" cy="57.5" r="5" fill="#fe718d">
+                    <animate
+                      attributeName="cy"
+                      calcMode="spline"
+                      keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5"
+                      repeatCount="indefinite"
+                      values="57.5;42.5;57.5;57.5"
+                      keyTimes="0;0.3;0.6;1"
+                      dur="1s"
+                      begin="-0.65"
+                    ></animate>
+                  </circle>
+                  <circle cx="42.5" cy="57.5" r="5" fill="#f47e60">
+                    <animate
+                      attributeName="cy"
+                      calcMode="spline"
+                      keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5"
+                      repeatCount="indefinite"
+                      values="57.5;42.5;57.5;57.5"
+                      keyTimes="0;0.3;0.6;1"
+                      dur="1s"
+                      begin="-0.449999999999999965"
+                    ></animate>
+                  </circle>
+                  <circle cx="57.5" cy="57.5" r="5" fill="#f8b26a">
+                    <animate
+                      attributeName="cy"
+                      calcMode="spline"
+                      keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5"
+                      repeatCount="indefinite"
+                      values="57.5;42.5;57.5;57.5"
+                      keyTimes="0;0.3;0.6;
+                1"
+                      dur="1s"
+                      begin="-0.3s"
+                    ></animate>
+                  </circle>
+                  <circle cx="72.5" cy="57.5" r="5" fill="#abbd81">
+                    <animate
+                      attributeName="cy"
+                      calcMode="spline"
+                      keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5"
+                      repeatCount="indefinite"
+                      values="57.5;42.5;57.5;57.5"
+                      keyTimes="0;0.3;0.6;1"
+                      dur="1s"
+                      begin="-0.15s"
+                    ></animate>
+                  </circle>
+                </svg>
+              </div>
+            </button>
+          </div>
+          <!-- <select name="tbm" id="search-type">
+            <option value="" selected>All</option>
+            <option value="isch">Images</option>
+            <option value="vid">Videos</option>
+            <option value="bks">Books</option>
+            <option value="nws">News</option>
+            <option value="shop">Shopping</option>
+          </select> -->
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- 
+Put the following javascript before the closing </head> tag
+and replace 123:456 with your own Programmable Search Engine ID.
+<script async src="https://cse.google.com/cse.js?cx=123:456"></script>
+
+Place this tag where you want both of the search box and the search results to render 
+<div class="gcse-search"></div>
+
+full docs:
+https://developers.google.com/custom-search/docs/element
+-->
