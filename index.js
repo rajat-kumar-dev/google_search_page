@@ -153,10 +153,10 @@ window.addEventListener('keydown', (e) => {
 });
 function setTitle() {
   let titleValue = prompt('Enter The Title', 'Google');
-  alert('To change the title tap on it.');
   if (!titleValue || titleValue == 'null') {
     return setTitle();
   } else {
+    alert('To change the title tap on it.');
     localStorage.setItem('gspbyrj', titleValue);
     titleBar.textContent = titleValue.slice(0, 20);
   }
