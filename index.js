@@ -25,7 +25,7 @@ titleValue = localStorage.getItem('gspbyrj');
 if (!titleValue) {
   setTitle();
 } else {
-  titleBar.textContent = titleValue;
+  titleBar.textContent = titleValue.slice(0, 20);
 }
 
 let speechRecognitionActive = false;
@@ -152,12 +152,12 @@ window.addEventListener('keydown', (e) => {
   }
 });
 function setTitle() {
-  let titleValue = prompt('Enter Your Name');
+  let titleValue = prompt('Enter The Title', 'Google');
   if (!titleValue || titleValue == 'null') {
     return setTitle();
   } else {
     localStorage.setItem('gspbyrj', titleValue);
-    titleBar.textContent = titleValue;
+    titleBar.textContent = titleValue.slice(0, 20);
   }
 }
 titleBar.addEventListener('click', () => {
