@@ -164,5 +164,8 @@ function setTitle() {
 titleBar.addEventListener('click', () => {
   setTitle();
 });
+window.addEventListener('offline', function () {
+  alert('Oops! you are offline, voice recognition may not work properly.');
+});
 // window.dispatchEvent(new KeyboardEvent('keydown', { key: 'a' }));
 // window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
